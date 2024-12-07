@@ -2,28 +2,22 @@ from django.test import TestCase
 from shop.models import Product, Purchase
 from datetime import datetime
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 44d0611050b99de89b5a3c815e64bc1c2e90152d
 class ProductTestCase(TestCase):
     def setUp(self):
         Product.objects.create(name="book", price="740")
         Product.objects.create(name="pencil", price="50")
 
-<<<<<<< HEAD
     def test_correctness_types(self):
         self.assertIsInstance(Product.objects.get(name="book").name, str)
         self.assertIsInstance(Product.objects.get(name="book").price, int)
         self.assertIsInstance(Product.objects.get(name="pencil").name, str)
         self.assertIsInstance(Product.objects.get(name="pencil").price, int)
-=======
+
     def test_correctness_types(self):                   
         self.assertIsInstance(Product.objects.get(name="book").name, str)
         self.assertIsInstance(Product.objects.get(name="book").price, int)
         self.assertIsInstance(Product.objects.get(name="pencil").name, str)
-        self.assertIsInstance(Product.objects.get(name="pencil").price, int)        
->>>>>>> 44d0611050b99de89b5a3c815e64bc1c2e90152d
+        self.assertIsInstance(Product.objects.get(name="pencil").price, int)
 
     def test_correctness_data(self):
         self.assertTrue(Product.objects.get(name="book").price == 740)
@@ -47,8 +41,4 @@ class PurchaseTestCase(TestCase):
         self.assertTrue(Purchase.objects.get(product=self.product_book).person == "Ivanov")
         self.assertTrue(Purchase.objects.get(product=self.product_book).address == "Svetlaya St.")
         self.assertTrue(Purchase.objects.get(product=self.product_book).date.replace(microsecond=0) == \
-<<<<<<< HEAD
-                        self.datetime.replace(microsecond=0))
-=======
             self.datetime.replace(microsecond=0))
->>>>>>> 44d0611050b99de89b5a3c815e64bc1c2e90152d

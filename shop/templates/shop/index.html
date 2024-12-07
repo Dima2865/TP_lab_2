@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Товары</title>
+</head>
+<body>
+    <div>
+        <h2>Магазин товаров для быта</h2>
+        <h3><a href="{% url 'customers' %}">Список покупателей</a></h3>
+        <h3>Список товаров</h3>
+        <table style="border-collapse: collapse;">
+            <tr>
+                <td style="border: 1px solid black;"><p>Наименование</p></td>
+                <td style="border: 1px solid black;"><p>Цена</p></td>
+                <td style="border: 1px solid black;"></td>
+            </tr>
+            {% for product in products %}
+                <tr>
+                    <td style="border: 1px solid black;"><p>{{ product.name }}</p></td>
+                    <td style="border: 1px solid black;"><p>{{ product.price }}</p></td>
+                    <td style="border: 1px solid black;"><p><a href="{% url 'buy' product.id %}">Купить</a></p></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

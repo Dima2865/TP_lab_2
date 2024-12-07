@@ -1,0 +1,6 @@
+.venv
+.idea
+shop/__pycache__
+tplab2/__pycache__
+shop/migrations/__pycache__
+shop/tests/__pycache__

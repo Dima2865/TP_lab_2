@@ -1,0 +1,18 @@
+- model: shop.customers
+  pk: 1
+  fields:
+    name: customer1
+    purchase_count: 2
+    discount: 0
+- model: shop.customers
+  pk: 2
+  fields:
+    name: customer2
+    purchase_count: 6
+    discount: 0
+- model: shop.customers
+  pk: 3
+  fields:
+    name: customer2
+    purchase_count: 12
+    discount: 0

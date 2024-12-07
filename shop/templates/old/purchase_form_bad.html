@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Покупка</title>
+</head>
+<body>
+    <div>
+        <h3>Покупка</h3>
+        <p>Продукт: {{ product.name }}</p>
+        <p>Цена: {{ product.price }}</p>
+        <p>Скидка: {{ discount }}%</p>
+        <p>Итоговая цена: {{ product.price * (1 - discount / 100) }}</p>
+    </div>
+</body>
+</html>
